@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Minutes to Seconds Converter</title>
+  <style>
+    input[type="number"] {
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      padding: 5px 10px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Minutes to Seconds Converter</h1>
+  <label>Enter time in minutes:</label>
+  <input type="number" id="minutes">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      var minutes = document.getElementById("minutes").value;
+      var seconds = minutes * 60;
+      document.getElementById("result").innerHTML = minutes + " minutes = " + seconds + " seconds";
+    }
+  </script>
+</body>
+</html>
